@@ -1,0 +1,108 @@
+:root{
+    --bg_color: #4B83CD;
+    --f_colorBtt: white;
+    --color_bolinha: #004AAD;
+}
+
+body{
+    background-color: var(--f_colorBtt);
+    
+}
+
+.container{
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+ 
+.container img{
+    width: 100%;
+    
+}
+
+.voltar, .avancar{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--f_colorBtt);
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.6s;
+    background-color: var(--color_bolinha);
+    user-select: none;
+    border-radius: 15px;
+}
+
+.avancar{
+    right: 0;
+}
+
+.voltar:hover, .avancar:hover{
+    background-color: var(--f_colorBtt);
+    color: black;
+}
+
+.n_text{
+    color: var(--f_colorBtt);
+    background-color: var(--color_bolinha);
+    font-size: 25px;
+    padding: 8px 25px;
+    position: absolute;
+    top: 0;
+}
+
+.i_text{
+    color: var(--f_colorBtt);
+    width: 100%;
+    font-size: 25px;
+    bottom: 0px;
+    padding: 8px 0px 8px 0px;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+}
+
+.bolinha_box{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.bolinha{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin: 0px 2px;
+    background-color: var(--bg_color);
+    display: inline-block;
+    border-radius: 50%;
+    transition: 1.0s;
+}
+
+.active, .bolinha:hover{
+    background-color: var(--color_bolinha);
+}
+
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from{ opacity: 0.4; }
+    to{ opacity: 1; }
+}
+
+@-webkit-keyframes fade{
+    from{ opacity: 0.4; }
+    to{ opacity: 1; }
+}
